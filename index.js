@@ -14,6 +14,8 @@ const options = {
 };
 
 const app = express();
+app.use(express.static('public'));
+
 
 const server = https.createServer(options, app).listen(80);
 const io = require('socket.io')(server);
