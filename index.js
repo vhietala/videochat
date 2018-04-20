@@ -17,6 +17,10 @@ const app = express();
 app.use(express.static('public'));
 
 
+app.get('/',(req,res)=>{
+  res.redirect('/public/videochat.html');
+}
+
 const server = https.createServer(options, app).listen(80);
 const io = require('socket.io')(server);
 
