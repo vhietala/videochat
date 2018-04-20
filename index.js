@@ -15,7 +15,7 @@ const options = {
 
 const app = express();
 
-const server = https.createServer(options, app).listen(3000);
+const server = https.createServer(options, app).listen(80);
 const io = require('socket.io')(server);
 
 io.on('connection', socket => {
@@ -24,7 +24,7 @@ io.on('connection', socket => {
 
       socket.on('call', data => {
         console.log(data);
-        socket.broadcast.emit('call', data);git add .
+        socket.broadcast.emit('call', data);
       });
 
       socket.on('answer', msg => {

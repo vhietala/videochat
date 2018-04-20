@@ -10,7 +10,7 @@ const servers = {
     }],
 };
 
-const socket = io.connect('https://localhost:3000');
+const socket = io.connect('https://localhost:80');
 const caller = new RTCPeerConnection();
 
 const constraints = {audio: true, video: true};
