@@ -21,7 +21,7 @@ app.get('/',(req,res)=>{
   res.redirect('/public/videochat.html');
 }
 
-const server = https.createServer(options, app).listen(80);
+//const server = https.createServer(options, app).listen(80);
 const io = require('socket.io')(server);
 
 io.on('connection', socket => {
