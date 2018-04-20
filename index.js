@@ -5,16 +5,16 @@ const https = require('https');
 const http = require('http');
 const fs = require('fs');
 
-const sslkey = fs.readFileSync('ssl-key.pem');
-const sslcert = fs.readFileSync('ssl-cert.pem');
-
-const options = {
-  key: sslkey,
-  cert: sslcert,
-};
+// const sslkey = fs.readFileSync('ssl-key.pem');
+// const sslcert = fs.readFileSync('ssl-cert.pem');
+//
+// const options = {
+//   key: sslkey,
+//   cert: sslcert,
+// };
 
 const app = express();
-app.use(express.static('public'));
+//app.use(express.static('public'));
 
 
 app.get('/',(req,res)=>{
